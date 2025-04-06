@@ -20,4 +20,4 @@ USER user
 
 COPY --chown=user . /app
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD uvicorn app:app --host 0.0.0.0 --port $PORT
