@@ -19,4 +19,7 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 -y
 USER user
 
 COPY --chown=user . /app
+
+EXPOSE 7860
+
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
